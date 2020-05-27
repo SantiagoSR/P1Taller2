@@ -13,13 +13,13 @@ def luminosity(request):
             # Crea el json para realizar la petición POST al Web Service
             args = {'type': 'lux', 'value': value, 'latitude': latitude, 'lenght': lenght, 'terrain': terrain}
             #response = requests.post('http://127.0.0.1:8000/luminosity/', args)
-            response = requests.post('https://p1-eafit-ssantacrur.azurewebsites.net', args)
+            response = requests.post('https://p1-eafit-ssantacrur.azurewebsites.net/luminosity/', args)
             # Convierte la respuesta en JSON
             luminosity_json = response.json()
 
     # Realiza una petición GET al Web Services
     #response = requests.get('http://127.0.0.1:8000/luminosity/')
-    response = requests.get('https://p1-eafit-ssantacrur.azurewebsites.net')
+    response = requests.get('https://p1-eafit-ssantacrur.azurewebsites.net/luminosity/')
     # Convierte la respuesta en JSON
     luminosity = response.json()
     # Rederiza la respuesta en el template measure
