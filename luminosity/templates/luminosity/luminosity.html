@@ -3,11 +3,14 @@
 <div class="container">
     <form method="get">
         <input type="number" name="value">
+        <input type="number" name="latitude">
+        <input type="number" name="lenght">
+        <input type="text" name="terrain">
         <button type="submit">Adicionar</button>
     </form>
     {% for luminosity in luminosity %}
         <ul class="list-group">
-             <li class="list-group-item">{{luminosity.type}} = {{luminosity.value}}</li>
+             <li class="list-group-item">{{luminosity.type}} = {{luminosity.value}}    Latitude = {{luminosity.latitude}}    Longitud = {{luminosity.lenght}}    Tipo terreno = {{luminosity.terrain}}</li>
         </ul>
     {% endfor %}
 </div>
